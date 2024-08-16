@@ -19,7 +19,7 @@ function Partner() {
         </div>
         <div className="col-md-1"></div>
         <div className="col-md-5 ">
-          <img src="assets/image19.svg" alt="" className="w-100 mb-4" style={{borderRadius:'12px'}}
+          <img src="assets/american-flags.jpg" alt="" className="w-100 mb-4" style={{borderRadius:'12px'}}
           data-aos="zoom-in"
           />
 

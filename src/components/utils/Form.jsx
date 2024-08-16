@@ -94,6 +94,7 @@ function Form() {
                   display: "flex",
                   flexDirection: "column",
                 }}
+                className="dot-icons-res"
               >
                 <GoDotFill color="#ff3737" size={30} />
                 <GoDotFill color="#ff3737" size={30} />

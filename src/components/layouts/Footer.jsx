@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 function Footer() {
   return (
     <div className="container-fluid footer-bg">
@@ -58,11 +53,15 @@ function Footer() {
                 <FaInstagram />
               </a>
               <a href="https://www.linkedin.com/company/91524607/admin/">
-              <FaLinkedin />
+                <FaLinkedin />
               </a>
               <a href="https://twitter.com/muslims_vote">
                 <FaTwitter />
-              </a>
+              </a>{" "}
+              <br />
+              <div className="mt-5">
+                <img src="assets/young_muslim_logo.png" alt="" width={150} />
+              </div>
             </div>
           </div>
           <hr style={{ height: "3px" }} className="mt-5" />

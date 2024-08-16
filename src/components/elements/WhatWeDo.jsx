@@ -7,12 +7,14 @@ function WhatWeDo() {
         <div className="row">
           <div className="col-md-6 m-auto">
             {/* <h1 className="res-text" data-aos="fade-up">The Muslim Youth</h1> */}
-            <img
+            {/* <img
               src="assets/arab-people.jpg"
               alt=""
               style={{ width: "200px", height: "100px", borderRadius: "10px", objectFit:'cover' }}
               data-aos="zoom-in"
-            />
+            /> */}
+          <img src="assets/young_muslim_logo.png" alt="" width={120}  data-aos="zoom-in" />
+
             <h2
               className="color-text"
               style={{ color: "#fff" }}
