@@ -14,7 +14,7 @@ function Section1() {
               >
                 Get Involved:
               </h1>
-              <h2 className="color-text vlounter " data-aos="fade-left">
+              <h2 className="color-text vlounter " style={{color:'#545d69'}} data-aos="fade-left">
                 <span className="span1" style={{ fontWeight: "900" }}>
                   By mobilizing{" "}
                 </span>{" "}
