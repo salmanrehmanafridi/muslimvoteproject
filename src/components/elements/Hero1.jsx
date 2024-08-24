@@ -77,7 +77,7 @@ function Hero1() {
               </div>
               {/* Second Page */}
               <div className="carousel-slide video-container">
-                <video className="background-video" autoPlay loop muted>
+                <video className="background-video" autoPlay loop muted preload='auto' playsInline> 
                   <source src="assets/hero-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
