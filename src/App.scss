@@ -74,7 +74,7 @@ body {
 .navbar {
   box-shadow: 0px 5px 12px 2px rgb(0 0 0 / 20%);
   transition: 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-  background: linear-gradient(95deg, #f13e3e 0%, #2c59e3 100%);
+  background: linear-gradient(95deg, #f13e3e 0%, #2c59e3 30%);
 }
 // .header {
 //   position: absolute;
@@ -514,7 +514,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
-  color: #6a6a6a;
+  color: #fff;
   .span1 {
     color: #ff3737;
   }
@@ -634,10 +634,15 @@ body {
 @media only screen and (max-width: "600px") {
   .countdown-text {
     margin-top: 20px;
-    padding: 5px 18px !important;
+    padding: 5px 27px !important;
     .countdown-days {
       font-size: 30px !important;
     }
+  }
+  .video-container{
+    height: 60vh !important;
+  }.hero-slider-bg{
+    height: 60vh !important;
   }
   .countdown-modal-container{
     justify-content: center !important;
@@ -1501,12 +1506,13 @@ input::-webkit-inner-spin-button {
   text-align: center !important;
 }
 .countdown-title {
-  color: #ffffff !important;
-  font-family: "FuturaBold", sans-serif !important;
-  font-size: 26px !important;
+  color: #000 !important;
+  font-family: "raleway" !important;
+  font-size: 46px !important;
   letter-spacing: 5px !important;
   font-weight: 700 !important;
   text-align: center !important;
+  padding-top: 30px;
 }
 .countdown-days {
   font-family: "FuturaBold", sans-serif !important;
@@ -1547,7 +1553,7 @@ input::-webkit-inner-spin-button {
   outline: none;
   transition: background-color 0.3s ease;
   animation: bounce 2s infinite;
-  background: #0056b3;
+  background: #ff3737;
   border-radius: 100px;
   padding: 17px 32px;
   font-family: "Raleway";
@@ -1556,11 +1562,95 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
   line-height: 23px;
   color: #fff;
-  border: 1px solid #0054b2;
-  box-shadow: 0px 1px 18px 1px #0054b2;
+  border: 1px solid #ff3737;
+  box-shadow: 0px 1px 18px 1px #ff3737;
 }
 
 .bounce-button:hover {
-  background-color: transparent;
-  color: #0054b2;
+  // background-color: transparent;
+  color: #fff;
+}
+.rfm-marquee{
+  z-index: 0 !important;
+}
+
+.hero-slider-bg{
+  background-image: linear-gradient(rgba(21, 84, 210, 0.5),
+  rgba(27, 78, 218, 0.5)), url(./media/heroslider.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    color: #fff !important;
+    font-family: "raleway" !important;
+    font-size: 46px !important;
+    letter-spacing: 5px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    padding-top: 30px;
+    span{
+      // padding-top: 20px;
+      font-size: 76px !important;
+      color: red;
+    }
+  }
+}
+
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.326); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure overlay is above the video but below the text */
+}
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1; /* Ensure content is above video/image */
+  width: 80%;
+}
+
+.dashes {
+  flex: 1;
+  border-bottom: 2px solid rgb(255, 255, 255); /* Adjust the dash color and style as needed */
+width: 230px;
+}
+
+.hero-slider-container{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }

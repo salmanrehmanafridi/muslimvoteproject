@@ -5,8 +5,10 @@ function Header() {
     <nav className={`navbar navbar-expand-lg header py-0 `}>
       <div className="container-fluid  nav-cont">
         <a className="navbar-brand" href="/">
-          <img src="assets/logo.svg" alt="" width={200}  />
-          <img src="assets/young_muslim_logo.png" alt="" width={100} />
+        <div style={{paddingLeft:'40px'}}>
+          <img src="assets/logo.svg" alt="" style={{width:'200px'}}  />
+          <img src="assets/young_muslim_logo.png" alt="" style={{width:'70px', marginLeft:'-40px'}}/>
+        </div>
         </a>
         <button
           className="navbar-toggler"

@@ -13,8 +13,8 @@ import Form from '../components/utils/Form'
 function Home() {
   return (
     <>
-    <Form/>
     <Hero1/>
+    <Form/>
     <Banner1/>
     <Hero/>
     <Section4/>

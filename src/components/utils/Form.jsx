@@ -61,7 +61,7 @@ function Form() {
   }, [show]);
   return (
     <>
-      <Modal
+      {/* <Modal
         show={show}
         size="lg"
         centered
@@ -74,15 +74,18 @@ function Form() {
              Election is Just Around the Corner!
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body> */}
+        <div>
+        <h1 className="countdown-title"> Election is Just Around the Corner!</h1>
+
             <div
               style={{
                 fontSize: "24px",
                 fontWeight: "bold",
                 display: "flex",
-                justifyContent: "space-around",
+                justifyContent: "space-evenly",
               }}
-              className="countdown-modal-container"
+              className="countdown-modal-container py-5"
             >
               <div className="countdown-text">
                 <span className="countdown-days">{timer.split(":")[0]}</span>{" "}
@@ -126,7 +129,8 @@ function Form() {
                   display: "flex",
                   flexDirection: "column",
                 }}
-                className="modal-dot-icons dot-icons-res"
+                // className="dot-icons-res"
+                className=" dot-icons-res modal-dot-icons"
               
               >
                 <GoDotFill color="#ff3737" size={30} />
@@ -153,8 +157,10 @@ function Form() {
                 Seconds
               </div>
             </div>
-        </Modal.Body>
-      </Modal>
+        </div>
+
+        {/* </Modal.Body>
+      </Modal> */}
     </>
   );
 }
