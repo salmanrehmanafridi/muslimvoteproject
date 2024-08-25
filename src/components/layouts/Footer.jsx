@@ -1,5 +1,7 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
+
 function Footer() {
   return (
     <div className="container-fluid footer-bg">
@@ -59,6 +61,14 @@ function Footer() {
                 <FaTwitter />
               </a>{" "}
               <br />
+              <div className="pt-4">
+
+                <a  style={{marginTop:'10px', fontFamily: "FuturaBold" }} href="tel:+19293089191">
+              <HiMiniDevicePhoneMobile /> <span>
+              +1(929)308-9191
+              </span>
+                </a>
+              </div>
               <div className="mt-5">
                 <img src="assets/young_muslim_logo.png" alt="" width={150} />
               </div>

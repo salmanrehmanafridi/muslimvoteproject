@@ -17,42 +17,40 @@ function Hero1() {
           return res.json();
         })
         .then((response) => {
-          setNewsHeadlines(response?.results)
+          console.log(response);
+          setNewsHeadlines(response?.results);
         });
     })();
   }, []);
   return (
     <>
       <Marquee pauseOnHover style={{ background: "red", color: "white" }}>
-
-        {newsHeadlines?.map((item,index)=> {
+        {newsHeadlines?.map((item, index) => {
           return (
-            <>
-               <p
-          style={{
-            display: "flex",
-            alignItems: "center",
-            paddingRight: "20px",
-            margin: 0,
-          }}
-          key={index}
-        >
-          <span
-            style={{
-              width: "10px",
-              height: "10px",
-              backgroundColor: "white",
-              display: "inline-block",
-              marginRight: "10px",
-            }}
-          ></span>
-          {item.title}
-        </p>
-            </>
-          )
+            <React.Fragment key={index}>
+              <p
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  paddingRight: "20px",
+                  margin: 0,
+                }}
+                key={index}
+              >
+                <span
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                    backgroundColor: "white",
+                    display: "inline-block",
+                    marginRight: "10px",
+                  }}
+                ></span>
+                {item.title}
+              </p>
+            </React.Fragment>
+          );
         })}
-     
-       
       </Marquee>
       <div className="container-fluid hero-slider-container">
         <div className="row">
@@ -116,6 +114,7 @@ function Hero1() {
                   muted
                   preload="auto"
                   playsInline
+                  controls="false"
                 >
                   <source src="assets/hero-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
@@ -157,6 +156,7 @@ function Hero1() {
                   muted
                   preload="auto"
                   playsInline
+                  controls="false"
                 >
                   <source src="assets/hero-slider-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
@@ -168,20 +168,26 @@ function Hero1() {
                     style={{ fontSize: "48px", lineHeight: "55px" }}
                     data-aos="fade-right"
                   >
-                  <span className="span1" style={{ fontWeight: "900" }}>
-                  Muslim votes project </span>   is committed to the civic advocacy of our community at all levels.
-Muslim votes project educates and mobilizes
-<span className="span2" style={{ fontWeight: "900" }}>
-Muslim American voters
-</span>
- in support of
-policies that enable our communities to thrive and democracy to flourish.
+                    <span className="span1" style={{ fontWeight: "900" }}>
+                      Muslim votes project{" "}
+                    </span>{" "}
+                    is committed to the civic advocacy of our community at all
+                    levels. Muslim votes project educates and mobilizes 
+                    <span className="span2" style={{ fontWeight: "900" }}>
+                    {" "} Muslim American voters{" "}
+                    </span>
+                    in support of policies that enable our communities to thrive
+                    and democracy to flourish.
                   </h2>
                 </div>
               </div>
 
               <div className="carousel-slide video-container">
-                <img src="assets/hero-slider-image.jpg" alt="" style={{width:'100%', height:'100%',objectFit:'cover'}}/>
+                <img
+                  src="assets/hero-slider-image.jpg"
+                  alt=""
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
               </div>
             </Carousel>
           </div>
