@@ -11,13 +11,13 @@ function Hero1() {
   useEffect(() => {
     (async () => {
       fetch(
-        "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=a9ba1be41d614aa1a37738abe9a14b78"
+        "https://newsdata.io/api/1/latest?apikey=pub_51711ca6e77583e4731e6ec522ae94471b466&language=en"
       )
         .then((res) => {
           return res.json();
         })
         .then((response) => {
-          setNewsHeadlines(response?.articles)
+          setNewsHeadlines(response?.results)
         });
     })();
   }, []);
