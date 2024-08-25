@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -6,22 +6,54 @@ import { Carousel } from "react-responsive-carousel";
 import Marquee from "react-fast-marquee";
 import { LiaStarSolid } from "react-icons/lia";
 function Hero1() {
+  const [newsHeadlines, setNewsHeadlines] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      fetch(
+        "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=a9ba1be41d614aa1a37738abe9a14b78"
+      )
+        .then((res) => {
+          return res.json();
+        })
+        .then((response) => {
+          setNewsHeadlines(response?.articles)
+        });
+    })();
+  }, []);
   return (
     <>
-      <Marquee pauseOnHover style={{ background: 'red', color: 'white' }}>
-      <p style={{ display: 'flex', alignItems: 'center', paddingRight: '20px', margin: 0 }}>
-        <span style={{ width: '10px', height: '10px', backgroundColor: 'white', display: 'inline-block', marginRight: '10px' }}></span>
-        At least 59 Palestinians killed since dawn, 100,000 displaced in two days.
-      </p>
-      <p style={{ display: 'flex', alignItems: 'center', paddingRight: '20px', margin: 0 }}>
-        <span style={{ width: '10px', height: '10px', backgroundColor: 'white', display: 'inline-block', marginRight: '10px' }}></span>
-        Israeli forces shoot, injure two children in West Bank town.
-      </p>
-      <p style={{ display: 'flex', alignItems: 'center', paddingRight: '20px', margin: 0 }}>
-        <span style={{ width: '10px', height: '10px', backgroundColor: 'white', display: 'inline-block', marginRight: '10px' }}></span>
-        ISIL claims Germany stabbing attack was ‘revenge for Muslims in Palestine’
-      </p>
-    </Marquee>
+      <Marquee pauseOnHover style={{ background: "red", color: "white" }}>
+
+        {newsHeadlines?.map((item,index)=> {
+          return (
+            <>
+               <p
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingRight: "20px",
+            margin: 0,
+          }}
+          key={index}
+        >
+          <span
+            style={{
+              width: "10px",
+              height: "10px",
+              backgroundColor: "white",
+              display: "inline-block",
+              marginRight: "10px",
+            }}
+          ></span>
+          {item.title}
+        </p>
+            </>
+          )
+        })}
+     
+       
+      </Marquee>
       <div className="container-fluid hero-slider-container">
         <div className="row">
           <div className="col-md-12">
@@ -77,14 +109,21 @@ function Hero1() {
               </div>
               {/* Second Page */}
               <div className="carousel-slide video-container">
-                <video className="background-video" autoPlay loop muted preload='auto' playsInline> 
+                <video
+                  className="background-video"
+                  autoPlay
+                  loop
+                  muted
+                  preload="auto"
+                  playsInline
+                >
                   <source src="assets/hero-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <div className="video-overlay"></div>
                 <div className="overlay-content">
                   <h2
-                    className="color-text"
+                    className="color-text slider-biggerText"
                     style={{ fontSize: "48px", lineHeight: "55px" }}
                     data-aos="fade-right"
                   >
@@ -108,7 +147,42 @@ function Hero1() {
                   </h2>
                 </div>
               </div>
-             
+
+              {/* Third Page */}
+              <div className="carousel-slide video-container">
+                <video
+                  className="background-video"
+                  autoPlay
+                  loop
+                  muted
+                  preload="auto"
+                  playsInline
+                >
+                  <source src="assets/hero-slider-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="video-overlay"></div>
+                <div className="overlay-content">
+                  <h2
+                    className="color-text"
+                    style={{ fontSize: "48px", lineHeight: "55px" }}
+                    data-aos="fade-right"
+                  >
+                  <span className="span1" style={{ fontWeight: "900" }}>
+                  Muslim votes project </span>   is committed to the civic advocacy of our community at all levels.
+Muslim votes project educates and mobilizes
+<span className="span2" style={{ fontWeight: "900" }}>
+Muslim American voters
+</span>
+ in support of
+policies that enable our communities to thrive and democracy to flourish.
+                  </h2>
+                </div>
+              </div>
+
+              <div className="carousel-slide video-container">
+                <img src="assets/hero-slider-image.jpg" alt="" style={{width:'100%', height:'100%',objectFit:'cover'}}/>
+              </div>
             </Carousel>
           </div>
         </div>

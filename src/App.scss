@@ -639,18 +639,23 @@ body {
       font-size: 30px !important;
     }
   }
-  .video-container{
-    height: 60vh !important;
-  }.hero-slider-bg{
+  .video-container {
     height: 60vh !important;
   }
-  .countdown-modal-container{
+  .hero-slider-bg {
+    height: 60vh !important;
+  }
+  .countdown-modal-container {
     justify-content: center !important;
   }
-  .dot-icons-res{
+  .dot-icons-res {
     margin-top: 20px !important;
   }
-
+  .overlay-content {
+    .slider-biggerText {
+      font-size: 50px !important;
+    }
+  }
   .modal-dot-icons {
     display: none !important;
   }
@@ -1570,23 +1575,26 @@ input::-webkit-inner-spin-button {
   // background-color: transparent;
   color: #fff;
 }
-.rfm-marquee{
+.rfm-marquee {
   z-index: 0 !important;
 }
 
-.hero-slider-bg{
-  background-image: linear-gradient(rgba(21, 84, 210, 0.5),
-  rgba(27, 78, 218, 0.5)), url(./media/heroslider.jpg);
+.hero-slider-bg {
+  background-image: linear-gradient(
+      rgba(21, 84, 210, 0.5),
+      rgba(27, 78, 218, 0.5)
+    ),
+    url(./media/heroslider.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  h1{
+  h1 {
     color: #fff !important;
     font-family: "raleway" !important;
     font-size: 46px !important;
@@ -1594,7 +1602,7 @@ input::-webkit-inner-spin-button {
     font-weight: 700 !important;
     text-align: center !important;
     padding-top: 30px;
-    span{
+    span {
       // padding-top: 20px;
       font-size: 76px !important;
       color: red;
@@ -1608,7 +1616,6 @@ input::-webkit-inner-spin-button {
   height: 100vh; /* Full viewport height */
   overflow: hidden;
 }
-
 
 .video-container {
   position: relative;
@@ -1630,7 +1637,7 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.326); /* Semi-transparent black overlay */
+  background: rgba(0, 0, 0, 0.489); /* Semi-transparent black overlay */
   z-index: 1; /* Ensure overlay is above the video but below the text */
 }
 .overlay-content {
@@ -1647,10 +1654,10 @@ input::-webkit-inner-spin-button {
 .dashes {
   flex: 1;
   border-bottom: 2px solid rgb(255, 255, 255); /* Adjust the dash color and style as needed */
-width: 230px;
+  width: 230px;
 }
 
-.hero-slider-container{
+.hero-slider-container {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }

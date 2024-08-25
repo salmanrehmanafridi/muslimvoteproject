@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Modal from "react-bootstrap/Modal";
 import { GoDotFill } from "react-icons/go";
 function Form() {
   const [show, setShow] = useState(true);
@@ -61,20 +60,6 @@ function Form() {
   }, [show]);
   return (
     <>
-      {/* <Modal
-        show={show}
-        size="lg"
-        centered
-        aria-labelledby="contained-modal-title-vcenter"
-        onHide={() => setShow(!show)}
-        className="modal-bg"
-      >
-        <Modal.Header>
-          <Modal.Title className="countdown-title">
-             Election is Just Around the Corner!
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body> */}
         <div>
         <h1 className="countdown-title"> Election is Just Around the Corner!</h1>
 
@@ -159,8 +144,6 @@ function Form() {
             </div>
         </div>
 
-        {/* </Modal.Body>
-      </Modal> */}
     </>
   );
 }
