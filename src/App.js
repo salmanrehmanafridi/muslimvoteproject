@@ -32,7 +32,7 @@ function App() {
   return (
    <>
    <BrowserRouter>
-   <Base>
+   {/* <Base> */}
    {/* <Routes>
     <Route index path = '/' element={<Home/>}/>
     <Route  path = '/contact' element={<Contact/>}/>
@@ -50,7 +50,7 @@ function App() {
     <Route  path = '/update-info' element={<Update/>}/>
     
    </Routes> */}
-   </Base>
+   {/* </Base> */}
    </BrowserRouter>
    </>
   );
