@@ -33,7 +33,7 @@ function App() {
    <>
    <BrowserRouter>
    <Base>
-   <Routes>
+   {/* <Routes>
     <Route index path = '/' element={<Home/>}/>
     <Route  path = '/contact' element={<Contact/>}/>
     <Route  path = '/voter-engagement' element={<VoterEngagement/>}/>
@@ -49,7 +49,7 @@ function App() {
     <Route  path = '/contact2' element={<Contact2/>}/>
     <Route  path = '/update-info' element={<Update/>}/>
     
-   </Routes>
+   </Routes> */}
    </Base>
    </BrowserRouter>
    </>
